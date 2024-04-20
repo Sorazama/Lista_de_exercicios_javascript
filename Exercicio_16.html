@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercicio 16</title>
+</head>
+<body>
+    <Script>
+        let somaIdades = 0
+        for (let i = 0; i < 20; i++) {
+            let idade = parseInt(prompt("Digite a idade da pessoa " + (i + 1) + ":"))
+            somaIdades += idade;
+        }
+        let mediaIdades = somaIdades / 20
+        alert("A média das idades das 20 pessoas é: " + mediaIdades.toFixed(2))
+    </Script>
+</body>
+</html>

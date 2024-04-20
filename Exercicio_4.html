@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercicio 4</title>
+</head>
+<body>
+    <script>
+        function ordenarDescendente(a, b, c) {
+            let valores = [a, b, c]
+            valores.sort(function(x, y) {
+                return y - x
+            })
+            
+            alert("Valores em ordem descendente: " + valores.join(", "))
+        }
+        let valorA = parseFloat(prompt("Digite o valor de A:"))
+        let valorB = parseFloat(prompt("Digite o valor de B:"))
+        let valorC = parseFloat(prompt("Digite o valor de C:"))
+        ordenarDescendente(valorA, valorB, valorC)
+
+    </script>
+</body>
+</html>

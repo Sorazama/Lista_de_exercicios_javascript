@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercicio 5</title>
+</head>
+<body>
+    <script>
+        function determinarClasseEleitoral(idade) {
+            if (idade < 16) {
+                return "Não eleitor"
+            } else if (idade >= 18 && idade < 65) {
+                return "Eleitor obrigatório"
+            } else {
+                return "Eleitor facultativo"
+            }
+        }
+        function mostrarClasseEleitoral(idade, classeEleitoral) {
+            alert("Idade: " + idade + " anos\nClasse eleitoral: " + classeEleitoral)
+        }
+        let idade = parseInt(prompt("Digite sua idade:"))
+        let classeEleitoral = determinarClasseEleitoral(idade)
+        mostrarClasseEleitoral(idade, classeEleitoral)
+    </script>
+</body>
+</html>

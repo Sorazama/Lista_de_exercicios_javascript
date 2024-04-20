@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercicio 2</title>
+</head>
+<body>
+    <script>
+        function verificarDivisibilidade(numero, divisor) {
+            return numero % divisor === 0;
+        }
+        function mostrarResultado(numero) {
+            let resultado = "O número " + numero + " não é divisível por 10, 5 ou 2."
+
+            if (verificarDivisibilidade(numero, 10)) {
+                resultado = "O número " + numero + " é divisível por 10."
+            } else if (verificarDivisibilidade(numero, 5)) {
+                resultado = "O número " + numero + " é divisível por 5."
+            } else if (verificarDivisibilidade(numero, 2)) {
+                resultado = "O número " + numero + " é divisível por 2."
+            }
+            alert(resultado)
+        }
+        let numero = parseInt(prompt("Digite um número:"))
+        mostrarResultado(numero)
+
+    </script>
+</body>
+</html>

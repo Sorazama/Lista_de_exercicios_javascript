@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercicio 1</title>
+</head>
+<body>
+    <script>
+        function mostrarTotalCalorias(totalCalorias) {
+            alert("O total de calorias da refeição é: " + totalCalorias + " calorias")
+        }
+        function calcularCalorias(prato, sobremesa, bebida) {
+            const tabelaCalorias = {
+                prato: [180, 230, 250, 350],
+                sobremesa: [75, 110, 170, 200],
+                bebida: [20, 70, 100, 65]
+            }
+            const totalCalorias = tabelaCalorias.prato[prato - 1] +
+            tabelaCalorias.sobremesa[sobremesa - 1] +
+            tabelaCalorias.bebida[bebida - 1];
+            mostrarTotalCalorias(totalCalorias)
+        }
+        let prato = parseInt(prompt("Escolha o prato:\n1 - Vegetariano\n2 - Peixe\n3 - Frango\n4 - Carne"));
+        let sobremesa = parseInt(prompt("Escolha a sobremesa:\n1 - Abacaxi\n2 - Sorvete diet\n3 - Mouse diet\n4 - Mouse chocolate"));
+        let bebida = parseInt(prompt("Escolha a bebida:\n1 - Chá\n2 - Suco de laranja\n3 - Suco de melão\n4 - Refrigerante diet"));
+
+        if (prato >= 1 && prato <= 4 && sobremesa >= 1 && sobremesa <= 4 && bebida >= 1 && bebida <= 4) {
+            calcularCalorias(prato, sobremesa, bebida);
+        } else {
+            alert("Opções inválidas. Por favor, escolha números de 1 a 4 para cada opção.");
+        }
+
+    </script>
+</body>
+</html>
